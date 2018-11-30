@@ -1,30 +1,68 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load markdownx %}
 
 {% block title %}The Nightmares we share - read{% endblock %}
 
 {% block nightmares_active %}active{% endblock %}
 
 {% block body %}
-    <!-- Card -->
-    <div class="card">
+    <div class="col-8 offset-2">
+        {% for part in nightmare.nightmarepart_set.all %}
+            <!-- Card -->
+            <div class="card mb-5 mt-5 z-depth-4">
 
-        <!-- Card image -->
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
-             alt="Card image cap">
+                {% if part.image %}
+                    <!-- Card image -->
+                    <img class="card-img-top" src="{{ part.image.url }}"
+                         alt="Card image cap">
+                {% endif %}
 
-        <!-- Card content -->
-        <div class="card-body">
+                <!-- Card content -->
+                <div class="card-body">
 
-            <!-- Title -->
-            <h4 class="card-title"><a>Card title</a></h4>
-            <!-- Text -->
-            <p class="card-text">Some quick example text to build on the card title and make up the
-                bulk of the card's content.</p>
-            <!-- Button -->
-            <a href="#" class="btn btn-primary">Button</a>
+                    <!-- Title -->
+                    <h4 class="card-title"><a>{{ nightmare.name }} - {{ part.number }}</a></h4>
+                    <!-- Text -->
+                    <p class="card-text">{{ part.text | markdown }}</p>
 
-        </div>
+                    {% if part.nightmaresurvey_set.last %}
+                        <hr/>
+                        {% if part.nightmaresurvey_set.last.completed or part.nightmaresurvey_set.last.get_time_left <= 0 %}
+                            <table class="table">
+                                {% for choice in part.nightmaresurvey_set.last.nightmaresurveyproposition_set.all %}
+                                    <thead>
+                                    <tr>
+                                        <th scope="col">{{ choice.name }}</th>
+                                        <th scope="col">{{ choice.vote }}</th>
+                                    </tr>
+                                    </thead>
+                                {% endfor %}
+                            </table>
+                        {% else %}
+                            <form class="text-left">
+                                temps restant :
+                                {{ part.nightmaresurvey_set.last.get_time_left }} mn
+                                <div class="form-check">
+                                    {% for choice in part.nightmaresurvey_set.last.nightmaresurveyproposition_set.all %}
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input"
+                                                   id="{{ choice.name }}"
+                                                   name="{{ part.id }}Radios">
+                                            <label class="custom-control-label"
+                                                   for="{{ choice.name }}">{{ choice.name }}</label>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <input type="submit" class="btn btn-primary" value="Envoyer"/>
+                            </form>
+                        {% endif %}
+                    {% endif %}
 
+                </div>
+
+            </div>
+            <!-- Card -->
+        {% endfor %}
     </div>
-    <!-- Card -->
 {% endblock %}

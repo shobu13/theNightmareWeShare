@@ -17,5 +17,6 @@ from django.urls import path
 from nightmare import views
 
 urlpatterns = [
+    path('', views.home, name='nightmare_home'),
     path('read/<int:nightmare_id>', views.read, name='nightmare_read'),
 ]

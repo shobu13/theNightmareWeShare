@@ -2,119 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4201036e-78f5-4148-a850-b75209b740a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templates/core/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/templatetags/markdownx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nightmare/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nightmare/templates/nightmare/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nightmare/templates/nightmare/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nightmare/templates/nightmare/read.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nightmare/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/addons/datatables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/addons/datatables.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/mdb.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/mdb.lite.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/mdb.lite.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/mdb.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/modules/animations-extended.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/modules/animations-extended.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Light.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/font/roboto/Roboto-Thin.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lightbox/default-skin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lightbox/default-skin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/lightbox/preloader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/overlays/09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/arrow_left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/svg/arrow_right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/addons/datatables.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/addons/datatables.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/mdb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/mdb.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/chart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/enhanced-modals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/forms-free.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/jquery.easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/scrolling-navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/velocity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/velocity.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/waves.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/modules/wow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/_custom-styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/_custom-variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/addons/_datatables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_colors.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_helpers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_masks.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_typography.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/_waves.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/bootstrap/_functions.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/core/bootstrap/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_animations-basic.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_badges.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_cards.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_carousels.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_depreciated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_dropdowns.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_footers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_forms.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_input-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_list-group.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_loader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_modals.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_msc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_navbars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_steppers.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_switch.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/modules/animations-extended/_module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/free/modules/animations-extended/animations-extended.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/mdb.lite.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/scss/mdb.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0002_auto_20181129_1911.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0003_auto_20181129_1923.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0004_auto_20181129_1938.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0005_auto_20181129_1943.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0006_auto_20181129_2028.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0007_auto_20181129_2052.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0008_auto_20181130_0016.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nightmare/migrations/0009_auto_20181130_0112.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/theNightmareWeShare.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/theNightmareWeShare.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/templates/nightmare/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/templates/nightmare/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/templates/nightmare/read.html" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/templates/nightmare/read.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nightmare/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nightmare/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theNightmareWeShare/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/theNightmareWeShare/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/theNightmareWeShare/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/theNightmareWeShare/urls.py" afterDir="false" />
     </list>
@@ -132,38 +39,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theNightmareWeShare/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="98">
+              <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/urls.py">
+        <entry file="file://$PROJECT_DIR$/theNightmareWeShare/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state>
+              <caret column="22" selection-start-column="3" selection-end-column="22" />
               <folding>
-                <element signature="e#628#656#0" expanded="true" />
+                <element signature="e#643#685#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/views.py">
+        <entry file="file://$PROJECT_DIR$/nightmare/templates/nightmare/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/templates/core/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="46" />
+            <state relative-caret-position="322">
+              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -171,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="345">
+              <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -180,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nightmare/templates/nightmare/read.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
+            <state relative-caret-position="299">
+              <caret line="16" column="71" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -190,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/nightmare/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="259">
-              <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+              <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
               <folding>
                 <element signature="e#633#661#0" expanded="true" />
               </folding>
@@ -201,10 +99,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nightmare/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+            <state relative-caret-position="345">
+              <caret line="34" column="104" selection-start-line="34" selection-start-column="104" selection-end-line="34" selection-end-column="104" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,19 +111,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nightmare/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/theNightmareWeShare/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+            <state relative-caret-position="161">
+              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
               <folding>
-                <element signature="e#643#675#0" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -247,15 +136,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/core/views.py" />
-        <option value="$PROJECT_DIR$/theNightmareWeShare/settings.py" />
-        <option value="$PROJECT_DIR$/nightmare/views.py" />
+        <option value="$PROJECT_DIR$/nightmare/admin.py" />
         <option value="$PROJECT_DIR$/theNightmareWeShare/urls.py" />
-        <option value="$PROJECT_DIR$/core/templates/core/home.html" />
+        <option value="$PROJECT_DIR$/theNightmareWeShare/settings.py" />
         <option value="$PROJECT_DIR$/nightmare/templates/nightmare/read.html" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/nightmare/views.py" />
+        <option value="$PROJECT_DIR$/core/urls.py" />
         <option value="$PROJECT_DIR$/nightmare/urls.py" />
+        <option value="$PROJECT_DIR$/core/templates/core/home.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/nightmare/templates/nightmare/home.html" />
         <option value="$PROJECT_DIR$/nightmare/models.py" />
       </list>
     </option>
@@ -272,6 +163,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -284,11 +176,23 @@
               <item name="theNightmareWeShare" type="462c0819:PsiDirectoryNode" />
               <item name="nightmare" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="theNightmareWeShare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theNightmareWeShare" type="462c0819:PsiDirectoryNode" />
+              <item name="nightmare" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="theNightmareWeShare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="theNightmareWeShare" type="462c0819:PsiDirectoryNode" />
+              <item name="nightmare" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="nightmare" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +200,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -353,18 +257,19 @@
       <option name="presentableId" value="Default" />
       <updated>1543486779712</updated>
       <workItem from="1543486926723" duration="4293000" />
-      <workItem from="1543491687328" duration="1896000" />
+      <workItem from="1543491687328" duration="7584000" />
+      <workItem from="1543518148237" duration="15556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6189000" />
+    <option name="totallyTimeSpent" value="27433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25321338" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25642672" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -374,7 +279,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="manage.py@theNightmareWeShare" order="7" visible="true" weight="0.32914925" />
+      <window_info active="true" anchor="bottom" id="manage.py@theNightmareWeShare" order="7" visible="true" weight="0.32914925" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -392,9 +297,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/templatetags/markdownx.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/img/svg/arrow_left.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -412,65 +314,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/admin/sites.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/models/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5808">
+          <caret line="639" column="8" selection-start-line="639" selection-start-column="8" selection-end-line="639" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nightmare/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/templatetags/markdownx.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theNightmareWeShare/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="109" column="16" selection-start-line="109" selection-start-column="16" selection-end-line="109" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nightmare/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="305">
+          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding>
             <element signature="e#628#656#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theNightmareWeShare/settings.py">
+    <entry file="file://$PROJECT_DIR$/core/templates/core/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nightmare/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        <state relative-caret-position="92">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theNightmareWeShare/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+        <state>
+          <caret column="22" selection-start-column="3" selection-end-column="22" />
           <folding>
-            <element signature="e#643#675#0" expanded="true" />
+            <element signature="e#643#685#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nightmare/templates/nightmare/read.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/templates/core/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="46" />
+        <state relative-caret-position="299">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="345">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nightmare/templates/nightmare/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nightmare/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="259">
-          <caret line="19" column="71" selection-start-line="19" selection-start-column="71" selection-end-line="19" selection-end-column="71" />
+          <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
           <folding>
             <element signature="e#633#661#0" expanded="true" />
           </folding>
@@ -479,10 +418,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/nightmare/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="19" column="97" selection-start-line="19" selection-start-column="97" selection-end-line="19" selection-end-column="97" />
+        <state relative-caret-position="345">
+          <caret line="34" column="104" selection-start-line="34" selection-start-column="104" selection-end-line="34" selection-end-column="104" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

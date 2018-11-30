@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% load markdownx %}
 
-</body>
-</html>
+{% block nightmares_active %}active{% endblock %}
+{% block title %}The Nightmares we share - nightmares{% endblock %}
+
+{% block body %}
+    <div class="col-6 offset-3">
+        {% for nightmare in nightmares %}
+            <!-- Card -->
+            <div class="card mb-2 mt-2">
+                {% if nightmare.nightmarepart_set.first.image %}
+                    <!-- Card image -->
+                    <img class="card-img-top"
+                         src="{{ nightmare.nightmarepart_set.first.image.url }}"
+                         alt="{{ part.image.name }}">
+                {% endif %}
+                <!-- Card content -->
+                <div class="card-body">
+                    <!-- Title -->
+                    <h4 class="card-title"><a>{{ nightmare.name }}</a></h4>
+                    <!-- Text -->
+                    <p class="card-text">{{ nightmare.nightmarepart_set.first.text | truncatewords:100 | markdown }}</p>
+                    <!-- Button -->
+                    <a href="#" class="btn btn-primary">Détails</a>
+                    <a href="{% url 'nightmare_read' nightmare.id %}" class="btn btn-success">Lire</a>
+                </div>
+            </div>
+            <!-- Card -->
+        {% endfor %}
+    </div>
+{% endblock %}
