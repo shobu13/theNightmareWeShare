@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% load markdownx %}
 
-</body>
-</html>
+{% block title %}The Nightmares we share - read{% endblock %}
+
+{% block nightmares_active %}active{% endblock %}
+
+{% block body %}
+    <div class="card mt-4">
+        <img class="card-img-top" src="{{ first_part.image.url }}"
+             alt="{{ first_part.image.name }}"/>
+        <div class="card-body">
+            <h4 class="card-title">{{ nightmare.name }}</h4>
+            <h5 class="card-subtitle text-black-50">de {{ nightmare.author.username }}</h5>
+            <hr/>
+            nombre de chapitres : {{ nb_chapitre }}
+            <br/>
+            date de création : {{ nightmare.date_creation.date }}
+            à {{ nightmare.date_creation.time }}
+            <hr/>
+            <p class="card-text">
+                {{ first_part.text }}
+            </p>
+            <hr/>
+            <a href="{% url 'nightmare_read' nightmare.id %}" class="d-flex justify-content-end">
+                <h5>
+                    Lire <i class="fa fa-angle-double-right"></i>
+                </h5>
+            </a>
+            <a href="{% url 'nightmare_home' %}" class="text-danger d-flex justify-content-between">
+                <h5>
+                    <i class="fa fa-angle-double-left"></i> Retour
+                </h5>
+            </a>
+        </div>
+    </div>
+{% endblock %}

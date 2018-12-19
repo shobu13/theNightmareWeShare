@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}The Nightmares we share - home{% endblock %}
+
+{% block accueil_active %}active{% endblock %}
+
+{% block body %}
+    <div class="card mt-3">
+        <div class="card-body">
+            <h3 class="card-title">Inscription</h3>
+            <form class="text-center p-5" action="{% url 'core_register' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_md_div }}
+                <input type="submit" class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+{% endblock %}

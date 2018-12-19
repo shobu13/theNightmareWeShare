@@ -32,7 +32,8 @@ class NightmareSurvey(models.Model):
     completed = models.BooleanField(default=False)
 
     def get_time_left(self):
-        return int(round((self.date_creation + self.duration - timezone.now()).total_seconds() / 60, 0))
+        return int(
+            round((self.date_creation + self.duration - timezone.now()).total_seconds() / 60, 0))
     # TODO faire une crontask qui vérifie régulièrement les tâches non complétée.
 
 

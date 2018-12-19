@@ -5,5 +5,109 @@
 {% block accueil_active %}active{% endblock %}
 
 {% block body %}
-    meh
+    <div class="card mt-3">
+        <img src="{{ last_nightmare.nightmarepart_set.first.image.url }}"
+             alt="{{ last_nightmare.nightmarepart_set.first.image.name }}" class="card-img-top"/>
+        <div class="card-body">
+            <h3 class="card-title">{{ last_nightmare.name }}</h3>
+            <p class="card-text">
+                {{ last_nightmare.nightmarepart_set.first.text }}
+            </p>
+        </div>
+        <a class="btn btn-primary"
+           href="{% url 'nightmare_detail' last_nightmare.id %}">Détails</a>
+        <a href="{% url 'nightmare_read' last_nightmare.id %}"
+           class="btn btn-success">Lire</a>
+    </div>
+
+
+
+    <!--<editor-fold desc="Modal registerSuccess">-->
+    <div class="modal fade top" id="RegisterSuccess" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-frame modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalPreviewLabel">Inscription réussie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="modal LoginSuccess">-->
+    <div class="modal fade top" id="LoginSuccess" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-frame modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalPreviewLabel">Connection réussie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!--</editor-fold>-->
+
+    <!--<editor-fold desc="modal LogoutSuccess">-->
+    <div class="modal fade top" id="LogoutSuccess" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-frame modal-top" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalPreviewLabel">Déconnection réussie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <!--</editor-fold>-->
+{% endblock %}
+
+{% block js %}
+    {% if statut == 'register_success' %}
+        <script>
+            $(document).ready(function () {
+                $('#RegisterSuccess').modal('toggle')
+            });
+        </script>
+    {% endif %}
+
+    {% if statut == 'login_success' %}
+        <script>
+            $(document).ready(function () {
+                $('#LoginSuccess').modal('toggle')
+            });
+        </script>
+    {% endif %}
+
+    {% if statut == 'logout_success' %}
+        <script>
+            $(document).ready(function () {
+                $('#LogoutSuccess').modal('toggle')
+            });
+        </script>
+    {% endif %}
 {% endblock %}

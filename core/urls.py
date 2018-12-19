@@ -19,4 +19,9 @@ from core import views
 
 urlpatterns = [
     path('', views.home, name='core_home'),
+    path('/<str:statut>', views.home, name='core_home'),
+    path('register', views.register, name='core_register'),
+    path('login', views.core_login, name='core_login'),
+    path('logout', views.core_logout, name='core_logout')
+
 ]
