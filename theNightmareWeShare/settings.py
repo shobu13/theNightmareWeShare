@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'markdownx',
     'nested_admin',
     'rest_framework',
-    'rest_framework_swagger',
+    'drf_yasg',
     'rest_framework_jwt',
 
     'core',
