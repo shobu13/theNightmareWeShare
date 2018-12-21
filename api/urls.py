@@ -1,7 +1,7 @@
-"""nightmare URL Configuration
+"""api URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/2.0/topics/http/urls/
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -14,10 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from nightmare import views
+from rest_framework.routers import DefaultRouter
+from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
+
+from api import viewsets
+
+router = DefaultRouter()
+router.register('nightmare', viewsets.NightmareViewset)
 
 urlpatterns = [
-    path('', views.home, name='nightmare_home'),
-    path('read/<int:nightmare_id>', views.read, name='nightmare_read'),
-    path('detail/<int:nightmare_id>', views.detail, name='nightmare_detail')
+    path(r'token-auth/', obtain_jwt_token),
+    path(r'token-refresh/', refresh_jwt_token),
 ]
+
+urlpatterns += router.urls

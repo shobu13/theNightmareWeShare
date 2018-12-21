@@ -17,7 +17,8 @@ class Nightmare(models.Model):
 
 class NightmarePart(models.Model):
     number = models.IntegerField()
-    nightmare = models.ForeignKey('Nightmare', on_delete=models.CASCADE)
+    nightmare = models.ForeignKey('Nightmare', on_delete=models.CASCADE,
+                                  related_name='nightmareparts')
     image = models.ImageField(upload_to='nightmare_part/', blank=True, null=True)
     text = MarkdownxField()
 
@@ -26,7 +27,8 @@ class NightmarePart(models.Model):
 
 
 class NightmareSurvey(models.Model):
-    part = models.ForeignKey('NightmarePart', on_delete=models.CASCADE)
+    part = models.ForeignKey('NightmarePart', on_delete=models.CASCADE,
+                             related_name='nightmarsurvey')
     duration = models.DurationField()
     date_creation = models.DateTimeField(default=timezone.now())
     completed = models.BooleanField(default=False)
@@ -40,4 +42,5 @@ class NightmareSurvey(models.Model):
 class NightmareSurveyProposition(models.Model):
     name = models.CharField(max_length=150)
     vote = models.IntegerField(default=0)
-    survey = models.ForeignKey('NightmareSurvey', on_delete=models.CASCADE)
+    survey = models.ForeignKey('NightmareSurvey', on_delete=models.CASCADE,
+                               related_name='nightmaresurveypropositions')

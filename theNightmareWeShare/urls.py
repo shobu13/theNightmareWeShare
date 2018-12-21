@@ -18,14 +18,16 @@ from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import path, include
 
+from rest_framework_swagger.views import get_swagger_view
+
 from theNightmareWeShare import settings
 
 urlpatterns = [
+    path('', get_swagger_view(title='theNightmareWeShare')),
     path('admin/', admin.site.urls),
-    path('', include('core.urls')),
-    path('nightmares/', include('nightmare.urls')),
     path('markdownx/', include('markdownx.urls')),
-    path('nested_admin/', include('nested_admin.urls'))
+    path('nested_admin/', include('nested_admin.urls')),
+    path('api/', include('api.urls'))
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

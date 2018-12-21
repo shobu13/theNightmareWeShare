@@ -49,6 +49,9 @@
                     <a class="nav-link" href="{% url 'core_register' %}">Créer un compte</a>
                 </li>
             {% else %}
+                <li class="nav-item {% block create_active %}{% endblock %}">
+                    <a class="nav-link" href="{% url 'nightmare_create' %}">Nouveau cauchemar</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'core_logout' %}">Déconnection</a>
                 </li>
