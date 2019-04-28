@@ -3,3 +3,4 @@ venv/
 
 \.idea/
 /theNightmareWeShare/local.py
+/theNightmareWeShare/prod.py
