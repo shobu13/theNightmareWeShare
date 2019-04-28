@@ -8,7 +8,7 @@
 
 {% block body %}
     <div class="col-8 offset-2">
-        {% for part in nightmare.nightmarepart_set.all %}
+        {% for part in nightmare.nightmareparts.all %}
             <!-- Card -->
             <div class="card mb-5 mt-5 z-depth-4">
 
@@ -26,25 +26,31 @@
                     <!-- Text -->
                     <p class="card-text">{{ part.text | markdown }}</p>
 
-                    {% if part.nightmaresurvey_set.last %}
+                    {% if part.nightmarsurvey %}
                         <hr/>
-                        {% if part.nightmaresurvey_set.last.completed or part.nightmaresurvey_set.last.get_time_left <= 0 %}
-                            <table class="table">
-                                {% for choice in part.nightmaresurvey_set.last.nightmaresurveyproposition_set.all %}
-                                    <thead>
+                        {% if part.nightmarsurvey.get_time_left <= 0 %}
+                            <table class="table table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Choix</th>
+                                    <th scope="col">Votes</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for choice in part.nightmarsurvey.nightmaresurveypropositions.all %}
                                     <tr>
-                                        <th scope="col">{{ choice.name }}</th>
-                                        <th scope="col">{{ choice.vote }}</th>
+                                        <td>{{ choice.name }}</td>
+                                        <td>{{ choice.vote }}</td>
                                     </tr>
-                                    </thead>
                                 {% endfor %}
+                                </tbody>
                             </table>
                         {% else %}
                             <form class="text-left">
                                 temps restant :
-                                {{ part.nightmaresurvey_set.last.get_time_left }} mn
+                                {{ part.nightmarsurvey.get_time_left }} mn
                                 <div class="form-check">
-                                    {% for choice in part.nightmaresurvey_set.last.nightmaresurveyproposition_set.all %}
+                                    {% for choice in part.nightmarsurvey.nightmaresurveypropositions.all %}
                                         <div class="custom-control custom-radio">
                                             <input type="radio" class="custom-control-input"
                                                    id="{{ choice.name }}"

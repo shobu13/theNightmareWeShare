@@ -1,9 +1,12 @@
-from rest_framework import viewsets
+from django.utils.decorators import method_decorator
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import viewsets, status
 from rest_framework import permissions
 from rest_framework import mixins
+from rest_framework.response import Response
 from rest_framework.settings import api_settings
 
-from api.serializers.nightmare import NightmareSerializer
+from api.serializers.nightmare import NightmareSerializer, NightmareDetailSerializer
 from nightmare.models import Nightmare
 
 
@@ -32,11 +35,12 @@ class MultiSerializerViewSet(viewsets.GenericViewSet):
 
 
 class NightmareViewset(MultiSerializerViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin,
-                       mixins.DestroyModelMixin, mixins.CreateModelMixin):
+                       mixins.DestroyModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin):
     queryset = Nightmare.objects.all()
     permission_classes = {
         'default': (permissions.IsAuthenticatedOrReadOnly,),
     }
     serializers = {
-        'default': NightmareSerializer,
+        'default': NightmareDetailSerializer,
+        'list': NightmareSerializer
     }

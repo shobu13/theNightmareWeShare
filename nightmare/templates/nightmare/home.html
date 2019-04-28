@@ -10,18 +10,18 @@
         {% for nightmare in nightmares %}
             <!-- Card -->
             <div class="card mb-2 mt-2">
-                {% if nightmare.nightmarepart_set.first.image %}
+                {% if nightmare.nightmareparts.first.image %}
                     <!-- Card image -->
                     <img class="card-img-top"
-                         src="{{ nightmare.nightmarepart_set.first.image.url }}"
-                         alt="{{ part.image.name }}">
+                         src="{{ nightmare.nightmareparts.first.image.url }}"
+                         alt="{{ nightmare.nightmareparts.first.image.name }}">
                 {% endif %}
                 <!-- Card content -->
                 <div class="card-body">
                     <!-- Title -->
                     <h4 class="card-title"><a>{{ nightmare.name }}</a></h4>
                     <!-- Text -->
-                    <p class="card-text">{{ nightmare.nightmarepart_set.first.text | truncatewords:100 | markdown }}</p>
+                    <p class="card-text">{{ nightmare.nightmareparts.first.text | truncatewords:100 | markdown }}</p>
                     <!-- Button -->
                     <a class="btn btn-primary"
                        href="{% url 'nightmare_detail' nightmare.id %}">Détails</a>

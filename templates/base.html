@@ -41,7 +41,7 @@
             <li class="nav-item {% block nightmares_active %}{% endblock %}">
                 <a class="nav-link" href="{% url 'nightmare_home' %}">Nightmares</a>
             </li>
-            {% if not user.is_authenticated %}
+            {% comment %}{% if not user.is_authenticated %}
                 <li class="nav-item {% block connexion_active %}{% endblock %}">
                     <a class="nav-link" href="{% url 'core_login' %}">Connexion</a>
                 </li>
@@ -55,7 +55,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'core_logout' %}">Déconnection</a>
                 </li>
-            {% endif %}
+            {% endif %}{% endcomment %}
         </ul>
         <!-- Links -->
 

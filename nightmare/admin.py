@@ -6,7 +6,7 @@ from nightmare.models import *
 
 class NightmareSurveyPropositionInline(nested_admin.NestedTabularInline):
     model = NightmareSurveyProposition
-    extra = 0
+    extra = 2
 
     classes = ['collapse']
 
@@ -18,8 +18,6 @@ class NightmareSurveyInline(nested_admin.NestedTabularInline):
     inlines = [
         NightmareSurveyPropositionInline,
     ]
-
-    classes = ['collapse']
 
 
 class NightmarePartInline(nested_admin.NestedTabularInline):

@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from core.serializers import UserSerializer
 from nightmare.models import Nightmare, NightmarePart, NightmareSurvey, NightmareSurveyProposition
 
 
@@ -14,20 +15,29 @@ class NightmareSurveySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NightmareSurvey
-        fields = ('id', 'duration', 'date_creation', 'completed', 'nightmaresurveypropositions')
+        fields = ('id', 'duration', 'date_creation', 'nightmaresurveypropositions')
 
 
 class NightmarePartSerializer(serializers.ModelSerializer):
-    nightmarsurvey = NightmareSurveySerializer(many=True)
+    nightmaresurvey = NightmareSurveySerializer(many=False)
 
     class Meta:
         model = NightmarePart
-        fields = ('id', 'number', 'image', 'text', 'nightmarsurvey')
+        fields = ('number', 'image', 'text', 'nightmaresurvey')
 
 
 class NightmareSerializer(serializers.ModelSerializer):
-    nightmareparts = NightmarePartSerializer(many=True)
+    author = UserSerializer(many=False)
 
     class Meta:
         model = Nightmare
         fields = ('id', 'name', 'date_creation', 'completed', 'author', 'nightmareparts')
+
+
+class NightmareDetailSerializer(serializers.ModelSerializer):
+    nightmareparts = NightmarePartSerializer(many=True)
+
+    class Meta:
+        model = Nightmare
+        fields = '__all__'
+        depth = 1

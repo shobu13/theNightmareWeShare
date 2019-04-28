@@ -5,20 +5,22 @@
 {% block accueil_active %}active{% endblock %}
 
 {% block body %}
-    <div class="card mt-3">
-        <img src="{{ last_nightmare.nightmarepart_set.first.image.url }}"
-             alt="{{ last_nightmare.nightmarepart_set.first.image.name }}" class="card-img-top"/>
-        <div class="card-body">
-            <h3 class="card-title">{{ last_nightmare.name }}</h3>
-            <p class="card-text">
-                {{ last_nightmare.nightmarepart_set.first.text }}
-            </p>
+    {% if last_nightmare %}
+        <div class="card mt-3">
+            <img src="{{ last_nightmare.nightmareparts.first.image.url }}"
+                 alt="{{ last_nightmare.nightmareparts.first.image.name }}" class="card-img-top"/>
+            <div class="card-body">
+                <h3 class="card-title">{{ last_nightmare.name }}</h3>
+                <p class="card-text">
+                    {{ last_nightmare.nightmareparts.first.text }}
+                </p>
+            </div>
+            <a class="btn btn-primary"
+               href="{% url 'nightmare_detail' last_nightmare.id %}">Détails</a>
+            <a href="{% url 'nightmare_read' last_nightmare.id %}"
+               class="btn btn-success">Lire</a>
         </div>
-        <a class="btn btn-primary"
-           href="{% url 'nightmare_detail' last_nightmare.id %}">Détails</a>
-        <a href="{% url 'nightmare_read' last_nightmare.id %}"
-           class="btn btn-success">Lire</a>
-    </div>
+    {% endif %}
 
 
 

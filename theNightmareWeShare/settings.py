@@ -81,10 +81,6 @@ WSGI_APPLICATION = 'theNightmareWeShare.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
 }
 
 # Password validation
@@ -151,3 +147,13 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication'
     ),
 }
+
+try:
+    from .local import *
+except ImportError:
+    print('local settings not found')
+    try:
+        from .prod import *
+    except ImportError:
+        print('prod settings not found')
+

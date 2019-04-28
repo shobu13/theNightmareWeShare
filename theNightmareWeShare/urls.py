@@ -47,7 +47,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('markdownx/', include('markdownx.urls')),
     path('nested_admin/', include('nested_admin.urls')),
-    path('api/', include('api.urls'))
+    path('', include('core.urls')),
+    path('nightmare/', include('nightmare.urls'))
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

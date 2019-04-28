@@ -1,4 +1,4 @@
-import math
+from datetime import timedelta
 
 from django.db import models
 from django.utils import timezone
@@ -8,7 +8,7 @@ from markdownx.models import MarkdownxField
 class Nightmare(models.Model):
     name = models.CharField(max_length=150)
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    date_creation = models.DateTimeField(default=timezone.now())
+    date_creation = models.DateTimeField(default=timezone.now)
     completed = models.BooleanField(default=False)
 
     def __str__(self):
@@ -16,7 +16,7 @@ class Nightmare(models.Model):
 
 
 class NightmarePart(models.Model):
-    number = models.IntegerField()
+    number = models.IntegerField(primary_key=True, )
     nightmare = models.ForeignKey('Nightmare', on_delete=models.CASCADE,
                                   related_name='nightmareparts')
     image = models.ImageField(upload_to='nightmare_part/', blank=True, null=True)
@@ -27,11 +27,10 @@ class NightmarePart(models.Model):
 
 
 class NightmareSurvey(models.Model):
-    part = models.ForeignKey('NightmarePart', on_delete=models.CASCADE,
-                             related_name='nightmarsurvey')
-    duration = models.DurationField()
-    date_creation = models.DateTimeField(default=timezone.now())
-    completed = models.BooleanField(default=False)
+    part = models.OneToOneField('NightmarePart', on_delete=models.CASCADE,
+                                related_name='nightmarsurvey')
+    duration = models.DurationField(default=timedelta(minutes=10))
+    date_creation = models.DateTimeField(default=timezone.now)
 
     def get_time_left(self):
         return int(
