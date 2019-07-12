@@ -10,11 +10,13 @@ from core.forms import RegisterForm, LoginForm
 
 
 def home(request, statut=None):
+    print("home")
     last_nightmare = Nightmare.objects.last()
     return render(request, 'core/home.html', locals())
 
 
-def register(request):
+def core_register(request):
+    print("register")
     form = RegisterForm(request.POST or None)
 
     if form.is_valid():

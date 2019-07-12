@@ -4,11 +4,13 @@ from nightmare.models import Nightmare
 
 
 def home(request):
+    print("nightmare_home")
     nightmares = Nightmare.objects.all()
     return render(request, 'nightmare/home.html', locals())
 
 
 def read(request, nightmare_id):
+    print("nightmare_read")
     nightmare = Nightmare.objects.get(id=nightmare_id)
     return render(request, 'nightmare/read.html', locals())
 

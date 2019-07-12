@@ -13,15 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.http import HttpResponseRedirect
 from django.urls import path
 
 from core import views
 
 urlpatterns = [
-    path('', views.home, name='core_home'),
-    path('<str:statut>', views.home, name='core_home_status'),
-    path('register', views.register, name='core_register'),
-    path('login', views.core_login, name='core_login'),
-    path('logout', views.core_logout, name='core_logout')
-
+    path('', lambda r: HttpResponseRedirect('home')),
+    path('home/<str:statut>', views.home, name='core_home_status'),
+    path('home/', views.home, name='core_home'),
+    path('register/', views.core_register, name='core_register'),
+    path('login/', views.core_login, name='core_login'),
+    path('logout/', views.core_logout, name='core_logout'),
 ]
