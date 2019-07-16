@@ -21,6 +21,7 @@ from api import viewsets
 
 router = DefaultRouter()
 router.register('nightmare', viewsets.NightmareViewset)
+router.register('nightmareSurvey', viewsets.NightmareSurveyViewset)
 
 urlpatterns = [
     path(r'token-auth/', obtain_jwt_token),

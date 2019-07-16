@@ -4,3 +4,24 @@ venv/
 \.idea/
 /theNightmareWeShare/local.py
 /theNightmareWeShare/prod.py
+
+vue/.DS_Store
+vue/node_modules
+vue/dist
+
+# local env files
+vue/.env.local
+vue/.env.*.local
+
+# Log files
+vue/npm-debug.log*
+vue/yarn-debug.log*
+vue/yarn-error.log*
+
+# Editor directories and files
+vue/.vscode
+vue/*.suo
+vue/*.ntvs*
+vue/*.njsproj
+vue/*.sln
+vue/*.sw?

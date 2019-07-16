@@ -4,35 +4,30 @@ import nested_admin
 from nightmare.models import *
 
 
-class NightmareSurveyPropositionInline(nested_admin.NestedTabularInline):
+class NightmareSurveyPropositionInline(admin.TabularInline):
     model = NightmareSurveyProposition
-    extra = 2
+    extra = 0
+    filter_horizontal = ('votes',)
 
     classes = ['collapse']
 
 
-class NightmareSurveyInline(nested_admin.NestedTabularInline):
-    model = NightmareSurvey
-    extra = 0
-
+class NightmareSurveyAdmin(admin.ModelAdmin):
     inlines = [
         NightmareSurveyPropositionInline,
     ]
 
 
-class NightmarePartInline(nested_admin.NestedTabularInline):
+class NightmarePartInline(admin.TabularInline):
     model = NightmarePart
     extra = 0
 
-    inlines = [
-        NightmareSurveyInline,
-    ]
 
-
-class NightmareAdmin(nested_admin.NestedModelAdmin):
+class NightmareAdmin(admin.ModelAdmin):
     inlines = [
         NightmarePartInline,
     ]
 
 
 admin.site.register(Nightmare, NightmareAdmin)
+admin.site.register(NightmareSurvey, NightmareSurveyAdmin)

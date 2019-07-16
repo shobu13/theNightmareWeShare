@@ -6,8 +6,8 @@ from rest_framework import mixins
 from rest_framework.response import Response
 from rest_framework.settings import api_settings
 
-from api.serializers.nightmare import NightmareSerializer, NightmareDetailSerializer
-from nightmare.models import Nightmare
+from api.serializers.nightmare import NightmareSerializer, NightmareDetailSerializer, NightmareSurveySerializer
+from nightmare.models import Nightmare, NightmareSurvey
 
 
 class MultiSerializerViewSet(viewsets.GenericViewSet):
@@ -44,3 +44,16 @@ class NightmareViewset(MultiSerializerViewSet, mixins.ListModelMixin, mixins.Ret
         'default': NightmareDetailSerializer,
         'list': NightmareSerializer
     }
+
+
+class NightmareSurveyViewset(MultiSerializerViewSet, mixins.ListModelMixin, mixins.RetrieveModelMixin,
+                             mixins.DestroyModelMixin, mixins.CreateModelMixin, mixins.UpdateModelMixin):
+    queryset = NightmareSurvey.objects.all()
+    permission_classes = {
+        'default': (permissions.IsAuthenticatedOrReadOnly,),
+    }
+    serializers = {
+        'default': NightmareSurveySerializer,
+    }
+
+    depth = 1

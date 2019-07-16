@@ -19,5 +19,5 @@ from nightmare import views
 urlpatterns = [
     path('', views.home, name='nightmare_home'),
     path('read/<int:nightmare_id>', views.read, name='nightmare_read'),
-    path('detail/<int:nightmare_id>', views.detail, name='nightmare_detail')
+    path('detail/<int:nightmare_id>', views.detail, name='nightmare_detail'),
 ]

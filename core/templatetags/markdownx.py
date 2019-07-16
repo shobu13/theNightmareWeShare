@@ -10,7 +10,6 @@ register = template.Library()
 
 @register.filter()
 def markdown(value, arg=None):
-    print(type(value))
     markdown_raw = mark_safe(markdownify(value))
     if not isinstance(arg, dict) and arg is not None:
         arg = [arg]

@@ -7,68 +7,48 @@
 {% block nightmares_active %}active{% endblock %}
 
 {% block body %}
-    <div class="col-8 offset-2">
-        {% for part in nightmare.nightmareparts.all %}
-            <!-- Card -->
-            <div class="card mb-5 mt-5 z-depth-4">
+    <div id="app">
+        <div class="col-8 offset-2">
+            {% for part in nightmare.nightmareparts.all %}
+                <!-- Card -->
+                <div class="card mb-5 mt-5 z-depth-4">
 
-                {% if part.image %}
-                    <!-- Card image -->
-                    <img class="card-img-top" src="{{ part.image.url }}"
-                         alt="Card image cap">
-                {% endif %}
-
-                <!-- Card content -->
-                <div class="card-body">
-
-                    <!-- Title -->
-                    <h4 class="card-title"><a>{{ nightmare.name }} - {{ part.number }}</a></h4>
-                    <!-- Text -->
-                    <p class="card-text">{{ part.text | markdown }}</p>
-
-                    {% if part.nightmarsurvey %}
-                        <hr/>
-                        {% if part.nightmarsurvey.get_time_left <= 0 %}
-                            <table class="table table-hover table-striped">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Choix</th>
-                                    <th scope="col">Votes</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                {% for choice in part.nightmarsurvey.nightmaresurveypropositions.all %}
-                                    <tr>
-                                        <td>{{ choice.name }}</td>
-                                        <td>{{ choice.vote }}</td>
-                                    </tr>
-                                {% endfor %}
-                                </tbody>
-                            </table>
-                        {% else %}
-                            <form class="text-left">
-                                temps restant :
-                                {{ part.nightmarsurvey.get_time_left }} mn
-                                <div class="form-check">
-                                    {% for choice in part.nightmarsurvey.nightmaresurveypropositions.all %}
-                                        <div class="custom-control custom-radio">
-                                            <input type="radio" class="custom-control-input"
-                                                   id="{{ choice.name }}"
-                                                   name="{{ part.id }}Radios">
-                                            <label class="custom-control-label"
-                                                   for="{{ choice.name }}">{{ choice.name }}</label>
-                                        </div>
-                                    {% endfor %}
-                                </div>
-                                <input type="submit" class="btn btn-primary" value="Envoyer"/>
-                            </form>
-                        {% endif %}
+                    {% if part.image %}
+                        <!-- Card image -->
+                        <img class="card-img-top" src="{{ part.image.url }}"
+                             alt="Card image cap">
                     {% endif %}
 
-                </div>
+                    <!-- Card content -->
+                    <div class="card-body">
 
-            </div>
-            <!-- Card -->
-        {% endfor %}
+                        <!-- Title -->
+                        <h4 class="card-title"><a> {{ nightmare.name }} - {{ part.priority }}</a></h4>
+                        <!-- Text -->
+                        <p class="card-text">{{ part.text | markdown }}</p>
+
+                        {% if part.nightmaresurvey %}
+                            <hr/>
+                            <nightmare-nightmare-part-survey
+                                    id="{{ part.nightmaresurvey.id }}"
+                                    end_date="{{ part.nightmaresurvey.get_end_time|date:"Y-m-d\TH:i:s" }}"></nightmare-nightmare-part-survey>
+                        {% endif %}
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            {% endfor %}
+        </div>
     </div>
+{% endblock %}
+
+{% block js %}
+    {% comment %}<script type="text/x-template" id="timer-template">
+        <div class="card-text" v-if="end">temps restant : [[ end.getMinutes() ]] mn [[ end.getSeconds() ]] s</div>
+    </script>
+
+    <script src="{% static 'nightmare/js/nightmare-survey-component.js' %}"></script>{% endcomment %}
+    <script src="{% static 'nightmare/js/components/nightmare.js' %}"></script>
+
 {% endblock %}

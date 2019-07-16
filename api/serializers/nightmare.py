@@ -7,7 +7,7 @@ from nightmare.models import Nightmare, NightmarePart, NightmareSurvey, Nightmar
 class NightmareSurveyPropositionSerializer(serializers.ModelSerializer):
     class Meta:
         model = NightmareSurveyProposition
-        fields = ('id', 'name', 'vote')
+        fields = '__all__'
 
 
 class NightmareSurveySerializer(serializers.ModelSerializer):
@@ -15,7 +15,7 @@ class NightmareSurveySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NightmareSurvey
-        fields = ('id', 'duration', 'date_creation', 'nightmaresurveypropositions')
+        fields = '__all__'
 
 
 class NightmarePartSerializer(serializers.ModelSerializer):
@@ -23,7 +23,7 @@ class NightmarePartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NightmarePart
-        fields = ('number', 'image', 'text', 'nightmaresurvey')
+        fields = '__all__'
 
 
 class NightmareSerializer(serializers.ModelSerializer):
