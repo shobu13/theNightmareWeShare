@@ -75,7 +75,7 @@
                 }
             },
             get_survey() {
-                axios.get(`http://127.0.0.1:8000/api/nightmareSurvey/${this.id}/`).then((data) => {
+                axios.get(`http://the-nightmare-we-share.shobu.fr/api/nightmareSurvey/${this.id}/`).then((data) => {
                     this.survey = data.data;
                 })
             }
